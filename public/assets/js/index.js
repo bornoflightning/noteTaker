@@ -33,7 +33,7 @@ const getNotes = () =>
     },
   });
 
-const saveNote = (note) =>
+const saveNote = (note) => 
   fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -41,7 +41,7 @@ const saveNote = (note) =>
     },
     body: JSON.stringify(note),
   });
-
+  
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
@@ -75,6 +75,8 @@ const handleNoteSave = () => {
     getAndRenderNotes();
     renderActiveNote();
   });
+  // added this to front end to reload page after adding item so that it shows immediately
+  window.location.reload();
 };
 
 // Delete the clicked note
@@ -93,6 +95,8 @@ const handleNoteDelete = (e) => {
     getAndRenderNotes();
     renderActiveNote();
   });
+  // added this to front end to reload page after deleting item so that it shows immediately
+  window.location.reload();
 };
 
 // Sets the activeNote and displays it

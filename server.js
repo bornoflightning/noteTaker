@@ -66,7 +66,11 @@ app.post('/api/notes', (req, res) => {
         const note = {
             title,
             text
-        };        
+        };     
+        // the following code follows these steps:
+        //step 1. reads data from json folder and stores it in a variable
+        // step 2. appends the new item or note to the json file variable
+        // step 3. rewrites the json file with the new data that includes the appended note  
         fs.readFile('./db.json', 'utf8', (error, data) => {
             if(!error) {
                 const jsonedNotes = JSON.parse(data);

@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  
 }
 
 .save-note {
@@ -49,11 +50,14 @@ html, body {
 
 .list-container {
   padding-left: 0;
+  padding-right: 0;
+  border: solid 2px gray;
 }
 
 .list-container .list-group,
 .list-container .list-group-item:first-child,
 .list-container .card {
+  
   border-top: none;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -74,4 +78,9 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  
 }
+
+
+
+

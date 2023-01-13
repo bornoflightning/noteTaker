@@ -15,15 +15,15 @@ app.use(express.static('public'));
 
 // root route, get for homepage
 app.get('/', (req, res) => {
-    // req.send("Hello");
-    res.sendFile(path.join(__dirname, './../../index.html'))
-    console.log("this is your request:" + req);
+    // res.send("Hello");
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+    console.log("your path is: " + __dirname);
 });
 
 // route for notes page
 
 app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, './../../notes.html'))
+    res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
 // listens to port

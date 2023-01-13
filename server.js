@@ -24,7 +24,7 @@ app.use(express.static('public'));
 // root route, get for homepage
 app.get('/', (req, res) => {
     // res.send("Hello");
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.sendFile(path.join(__dirname, '/index.html'))
     console.log("your path is: " + __dirname);
 });
 
